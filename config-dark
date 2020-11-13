@@ -1,0 +1,194 @@
+[colors]
+
+background = #aa000000
+background-alt = #DFDFDFb4
+foreground = #dfdfdf
+foreground-alt = #000
+primary = #DFDFDF
+secondary = #e60053
+alert = #bd2c40
+blank = #fff
+
+[bar/main]
+width = 100%
+height = 38
+radius = 2.0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 4
+border-color = #aa000000
+
+padding-left = 0
+padding-right = 0
+
+module-margin-left = 1
+module-margin-right = 2
+   font-0 = "Source Code Pro:size=11"
+   font-1 = "Iosevka Nerd Font:size=12;2"
+   font-2 = "Iosevka Nerd Font:size=12;2"
+modules-left = bspwm term nav nitro mng 
+modules-center =  
+modules-right = xbacklight pulseaudio battery date wlan eth
+
+tray-position = right
+tray-padding = 2
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+[module/bspwm]
+type = internal/bspwm
+label-focused = 
+label-focused-underline = #fff
+label-focused-padding = 2
+
+label-occupied = 
+label-occupied-padding = 2
+
+label-urgent = 
+label-urgent-background = ${colors.alert}
+label-urgent-padding = 2
+
+label-empty = 
+label-empty-foreground = #FDFBE2
+label-empty-padding = 2
+
+[module/xbacklight]
+type = internal/xbacklight
+
+format = <label> <bar> 
+label = %percentage%%
+
+bar-width = 10
+bar-indicator = ─
+bar-indicator-foreground = #fff
+bar-indicator-font = 2
+bar-fill = ─
+bar-fill-font = 2
+bar-fill-foreground = #fff
+bar-empty = ─
+bar-empty-font = 2
+bar-empty-foreground = #000
+
+[module/backlight-acpi]
+inherit = module/xbacklight
+type = internal/backlight
+card = intel_backlight
+
+
+[module/wlan]
+type = internal/network
+interface = wlan0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+label-connected = %{A1:nm-connection-editor:}%essid%%{A}
+
+format-disconnected = Descanectado!!
+
+ramp-signal-0 =  
+ramp-signal-foreground = ${colors.blank}
+
+[module/eth]
+type = internal/network
+interface = enp3s0
+interval = 3.0
+
+format-connected-prefix-foreground = ${colors.foreground-alt}
+label-connected = %local_ip%
+
+;format-disconnected = Desconectado!!
+;format-disconnected-underline = #000
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = " %Y-%m-%d"
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+label = %date% %time%
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+format-volume = <label-volume> <bar-volume>
+label-volume = %percentage%%
+label-volume-foreground = ${root.foreground}
+
+label-muted =  muted
+label-muted-foreground = #666
+
+bar-volume-width = 10
+bar-volume-foreground-3 = #fff
+bar-volume-foreground-4 = #fff
+bar-volume-foreground-5 = #fff
+bar-volume-foreground-6 = #fff
+bar-volume-gradient = false
+bar-volume-indicator = ─
+bar-volume-indicator-font = 2
+bar-volume-fill = ─
+bar-volume-fill-font = 2
+bar-volume-empty = ─
+bar-volume-empty-font = 2
+bar-volume-empty-foreground = #000
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+
+format-full-prefix = " "
+format-full-prefix-foreground = #fff
+
+animation-charging-foreground = #66B1B4
+animation-charging-framerate = 750
+[settings]
+screenchange-reload = true
+
+[module/term]
+type = custom/text
+content = "%{T2}%{T-}" 
+content-foreground = #fff
+;content-background = #00000000
+content-padding = 1
+click-left = alacritty &
+
+[module/nitro]
+type = custom/text
+content = "%{T2}%{T-}"
+content-foreground = #fff
+content-padding = 1
+click-left = nitrogen &
+
+[module/mng]
+type = custom/text
+content = "%{T2}%{T-}"
+content-foreground = #fff
+content-padding = 1
+click-left = thunar &
+click-left-underline = #fff
+[module/nav]
+type = custom/text
+content = "%{T2}%{T-}"
+content-foreground = #fff
+content-pading = 1
+click-left = chromium &
+
+[global/wm]
+;margin-top = 5
+margin-bottom = 0
+
+; en caso de que quieras cambiar los iconos visita fontawesome.com/v4.7.0/cheatsheet/
