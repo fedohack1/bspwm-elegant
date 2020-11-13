@@ -10,9 +10,11 @@ git clone https://github.com/fedohack1/bspwm-elegant.git
 
 # Demo
 Barra light mode
+
  ![alt text](https://raw.githubusercontent.com/fedohack1/bspwm-elegant/main/lightbar.png)
 
-
+Barra dark mode
+ ![alt text](https://raw.githubusercontent.com/fedohack1/bspwm-elegant/main/darkbar.png)
 # Instalacion de recursos
 
 Primero instalaremos lo necesario en el sistema operativo linux
