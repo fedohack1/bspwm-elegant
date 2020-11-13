@@ -8,6 +8,11 @@ Este es una personalizacion propia para que ustedes puedan disfrutar de bspwm en
 git clone https://github.com/fedohack1/bspwm-elegant.git
 ```
 
+# Demo
+Barra light mode
+ ![alt text](https://raw.githubusercontent.com/fedohack1/bspwm-elegant/main/lightbar.png)
+
+
 # Instalacion de recursos
 
 Primero instalaremos lo necesario en el sistema operativo linux
