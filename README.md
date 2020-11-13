@@ -1,4 +1,4 @@
-# bspwm-elegant
+# Bspwm-elegant
 BSPWM elegant. una manera elegante de gestionar tu bspwm
 
 Este es una personalizacion propia para que ustedes puedan disfrutar de bspwm en la manera de que la he personalizado para ustedes
@@ -8,7 +8,7 @@ Este es una personalizacion propia para que ustedes puedan disfrutar de bspwm en
 git clone https://github.com/fedohack1/bspwm-elegant.git
 ```
 
-# Instalacion de polybar
+# Instalacion de recursos
 
 Primero instalaremos lo necesario en el sistema operativo linux
 
