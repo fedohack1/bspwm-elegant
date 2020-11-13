@@ -5,10 +5,15 @@ Este es una personalizacion propia para que ustedes puedan disfrutar de bspwm en
 
 # Instalacion de polybar
 
-Primero instalaremos polybar en el sistema operativo linux
+Primero instalaremos lo necesario en el sistema operativo linux
 
  - Arch Linux --- usaremos el asistente de AUR yay
  ```
- yay -S polybar
+ yay -S polybar nitrogen sxhkd bspwm # no todo se es necesario instalar en yay puedes usar pacman menos en polybar
  ```
  - Debian y derivadas
+   
+   Primero descarga las siguientes dependencias
+  ```
+  sudo apt install build-essential git vim xcb 
+  ```
